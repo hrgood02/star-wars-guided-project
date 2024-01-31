@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 
 
-export const CharacterButton = ({getAllTheCharacters}) => (
-    <section className = "Buttons"></section>
+export const CharacterButton = ({name}) => (
+    <button text = {name}/>
 )
