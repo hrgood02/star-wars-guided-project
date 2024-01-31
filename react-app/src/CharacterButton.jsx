@@ -1,4 +1,6 @@
-// import { Button } from "./Button";
+import { Button } from "./Button";
 
 
-// export const CharacterButton = ()
+export const CharacterButton = ({getAllTheCharacters}) => (
+    <section className = "Buttons"></section>
+)
