@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+*{
+  background-color: rgb(34, 34, 34);
+  font-family: 'Sixtyfour', sans-serif;
+}
+
+h1{
+  color: white;
+}

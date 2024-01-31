@@ -30,11 +30,13 @@ function App() {
 
   return (
     <>
-
-   <h1>Star Wars Universe Lookup</h1>
-   <main>
-       <CharacterButton characters = {characters}/>
-   </main>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+      </style>
+      <h1>Star Wars Universe Lookup</h1>
+      <main>
+        <Character characters={characters} />
+      </main>
     </>
   )
 }
