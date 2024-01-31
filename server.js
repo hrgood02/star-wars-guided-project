@@ -1,9 +1,17 @@
 import express from 'express';
+import { MongoClient } from 'mongodb';
 
+
+
+var url = "mongodb://127.0.0.1:27017";
+const client =new MongoClient(url);
+const dbName = "swapi";
 
 const app = express();
 
 app.use(express.json());
+
+
 
 app.all("*", (req, res, next) => {
     console.log(req.url);
@@ -11,27 +19,17 @@ app.all("*", (req, res, next) => {
   });
 
   app.get("/api/planets", async (req, res) => {
-    let planet = [{size: 15}];
-    if (planet === undefined){
-        res.statusCode= 404;
-        res.end();
-    } else{
-        res.send(planet);
-    }
-});
-    // try {
-
-    //   const client = await MongoClient.connect('mongodb://localhost:27017');
-    //   const db = client.db('swapiDB');
-    //   const collection = db.collection('swapiCollection');
-    //   const swapi = await collection.find().toArray();
-    //   client.close();
-    //   res.json(swapi);
-    // } catch (error) {
-    //   res.status(500).json({error: error});
-//   });
-
-
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection('planets');
+        const data = await collection.find({}).toArray();
+        res.json(data);
+      } catch (error) {
+        res.status(500).json({error: error});
+      }
+    });
 
 const port = 3500;
+client.close();
 app.listen(port, () => console.log(`Listening on port ${port}.`));
