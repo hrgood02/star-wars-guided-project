@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getCharacters } from './getCharacters';
 import './App.css'
+import { Character } from './Character';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +22,7 @@ function App() {
 
    <h1>Star Wars Universe Lookup</h1>
    <main>
-      {characters.map((character) => {return character.name})}
+       <Character characters = {characters}/>
    </main>
     </>
   )

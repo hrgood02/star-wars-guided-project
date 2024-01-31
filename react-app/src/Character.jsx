@@ -1,10 +1,9 @@
-export function Character({}) {
+export function Character({characters}) {
     return (
-      <section className="Character">
-        <h2>{header}</h2>
-        <div className="character-wrapper">
-          {character.map(character => <PersonCard person={person} key={person.name} />)}
-        </div>
-      </section>
+      <div>
+{characters.map((character) => <h1>{character.name}</h1>)}
+      </div>
+        
+
     )
   }
