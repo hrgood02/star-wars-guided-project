@@ -1,0 +1,24 @@
+{
+  "name": "star-wars-guided-project",
+  "version": "1.0.0",
+  "description": "Navigate between people, planets, and films found in the Star Wars universe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrgood02/star-wars-guided-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrgood02/star-wars-guided-project/issues"
+  },
+  "homepage": "https://github.com/hrgood02/star-wars-guided-project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "type": "module"
+}
